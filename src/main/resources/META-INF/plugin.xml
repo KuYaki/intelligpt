@@ -1,0 +1,24 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.kuyaki.intelligpt</id>
+    <name>IntelliGPT</name>
+    <vendor>KuYaki</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <resource-bundle>messages.GPTBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow
+                factoryClass="com.kuyaki.intelligpt.toolWindow.GPTToolWindowFactory"
+                id="IntelliGPT.ToolWindow"
+                anchor="right"
+        />
+    </extensions>
+
+    <applicationListeners>
+        <listener
+                class="com.kuyaki.intelligpt.listeners.GPTFrameStateListener"
+                topic="com.intellij.ide.FrameStateListener"/>
+    </applicationListeners>
+</idea-plugin>
