@@ -37,4 +37,4 @@ The following roadmap outlines the future development of IntelliGPT:
 Contributions to IntelliGPT are welcome! If you're interested in contributing, please read our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines and instructions.
 
 ## License
-IntelliGPT is licensed under the MIT License.
+IntelliGPT is licensed under the [MIT License](LICENSE).
