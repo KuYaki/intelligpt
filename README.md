@@ -13,7 +13,7 @@ IntelliGPT is an IntelliJ IDEA plugin that integrates OpenAI's GPT-powered natur
 ## Current Status
 The current version of IntelliGPT includes a basic user interface with essential elements, such as input fields and buttons. However, there are several crucial features yet to be implemented:
 
-1. **Tooltips for buttons**: Improve the user experience by providing helpful hints on the purpose and functionality of each button in the interface.
+1. ~~**Tooltips for buttons**: Improve the user experience by providing helpful hints on the purpose and functionality of each button in the interface.~~ (Completed)
 2. **Button transition animations**: Add smooth animations when transitioning between buttons (e.g., switching from the voice input button to the send button).
 3. **Authentication**: Implement a secure authentication mechanism for users to access the GPT API.
 4. **GPT functions**: Extend the plugin's capabilities by adding the following GPT-driven features:
@@ -24,6 +24,9 @@ The current version of IntelliGPT includes a basic user interface with essential
 5. **GPT prompts**: Refine GPT's output by crafting efficient prompts, ensuring that it focuses on relevant information and effectively utilizes its available functions.
 6. **Microphone access**: Implement microphone access and integration for voice input functionality.
 7. **Voice command input**: Allow users to issue voice commands to control the plugin and interact with GPT more efficiently.
+8. **Plugin settings**: Add the plugin's settings to the general settings in the IDE, allowing users to customize its behavior according to their preferences.
+9. **GPT version selection**: Implement a dropdown menu on the plugin panel for users to choose the GPT version they want to use.
+10. **Testing**: Thoroughly test the entire plugin, ensuring that all functionalities work as expected and are well-documented.
 
 ## Roadmap
 The following roadmap outlines the future development of IntelliGPT:

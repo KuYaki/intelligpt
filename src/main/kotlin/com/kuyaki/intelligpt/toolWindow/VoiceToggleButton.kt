@@ -1,6 +1,8 @@
 package com.kuyaki.intelligpt.toolWindow
 
+import com.intellij.openapi.util.IconLoader
 import com.intellij.ui.JBColor
+import com.kuyaki.intelligpt.GPTBundle
 import com.kuyaki.intelligpt.utils.isDarkTheme
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent
@@ -14,13 +16,15 @@ class VoiceToggleButton(
 ) : JToggleButton() {
 
     init {
-        val whiteIcon: Icon = ImageIcon(javaClass.getResource("/icons/mic_white.png"))
-        val blackIcon: Icon = ImageIcon(javaClass.getResource("/icons/mic_black.png"))
+        val whiteIcon: Icon = IconLoader.getIcon("/icons/mic/mic_white.png", javaClass)
+        val blackIcon: Icon = IconLoader.getIcon("/icons/mic/mic_black.png", javaClass)
         icon = if (isDarkTheme()) whiteIcon else blackIcon
         background = if (isDarkTheme()) JBColor.DARK_GRAY else JBColor.LIGHT_GRAY
         isContentAreaFilled = false
 
         isFocusable = false
+
+        toolTipText = GPTBundle.message("voiceToggleButton.tooltip")
 
         addMouseListener(object : MouseAdapter() {
             override fun mouseEntered(e: MouseEvent?) {
