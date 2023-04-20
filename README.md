@@ -1,12 +1,6 @@
 # IntelliGPT
 
 <!-- Plugin description -->
-IntelliGPT is a plugin for IntelliJ IDEA that allows you to interact with GPT-4 powered AI.
-<!-- Plugin description end -->
-
-# IntelliGPT
-
-<!-- Plugin description -->
 IntelliGPT is an IntelliJ IDEA plugin that integrates OpenAI's GPT-powered natural language processing capabilities into your development workflow. It allows you to interact with GPT directly from the IDE, enabling seamless code assistance, navigation, and voice input.
 <!-- Plugin description end -->
 
@@ -16,11 +10,15 @@ The current version of IntelliGPT includes a basic user interface with essential
 1. ~~**Tooltips for buttons**: Improve the user experience by providing helpful hints on the purpose and functionality of each button in the interface.~~ (Completed)
 2. **Button transition animations**: Add smooth animations when transitioning between buttons (e.g., switching from the voice input button to the send button).
 3. **Authentication**: Implement a secure authentication mechanism for users to access the GPT API.
+   - [x] Implement Token based authentication.
+   - [ ] Improve the user interface for authentication.
+   - [ ] Implement saving the API key for future use.
+   - [ ] Implement OAuth 2 authentication.
 4. **GPT functions**: Extend the plugin's capabilities by adding the following GPT-driven features:
-   - Add and remove files in the project.
-   - Open specific files.
-   - Copy code to the clipboard and create diffs between the current code and the clipboard content.
-   - Request the content of a file.
+   - [ ] Add and remove files in the project.
+   - [ ] Open specific files.
+   - [ ] Copy code to the clipboard and create diffs between the current code and the clipboard content.
+   - [ ] Request the content of a file.
 5. **GPT prompts**: Refine GPT's output by crafting efficient prompts, ensuring that it focuses on relevant information and effectively utilizes its available functions.
 6. **Microphone access**: Implement microphone access and integration for voice input functionality.
 7. **Voice command input**: Allow users to issue voice commands to control the plugin and interact with GPT more efficiently.

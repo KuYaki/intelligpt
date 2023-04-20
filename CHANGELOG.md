@@ -7,11 +7,14 @@
 ### Added
 - Initial interface for IntelliGPT tool window, featuring an input field and VoiceToggleButton.
 - Tooltips for buttons, providing helpful hints on their purpose and functionality.
+- Token-based authentication for GPT API access.
 
 ### To-Do
 - Add animation for button transitions (SendButton and VoiceToggleButton).
 - Add tests for all the previously done and keep them actual.
-- Implement authentication for GPT services.
+- Improve the user interface for authentication.
+- Implement saving the API key for future use.
+- Implement OAuth 2 authentication.
 - Implement GPT functions:
   - Add and remove files in the project.
   - Open specific files.
