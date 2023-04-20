@@ -11,8 +11,8 @@ The current version of IntelliGPT includes a basic user interface with essential
 2. **Button transition animations**: Add smooth animations when transitioning between buttons (e.g., switching from the voice input button to the send button).
 3. **Authentication**: Implement a secure authentication mechanism for users to access the GPT API.
    - [x] Implement Token based authentication.
-   - [ ] Improve the user interface for authentication.
-   - [ ] Implement saving the API key for future use.
+   - [x] Improve the user interface for authentication.
+   - [x] Implement saving the API key for future use.
    - [ ] Implement OAuth 2 authentication.
 4. **GPT functions**: Extend the plugin's capabilities by adding the following GPT-driven features:
    - [ ] Add and remove files in the project.

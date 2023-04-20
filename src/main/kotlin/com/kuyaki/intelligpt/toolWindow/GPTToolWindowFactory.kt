@@ -1,5 +1,6 @@
 package com.kuyaki.intelligpt.toolWindow
 
+import com.intellij.ide.util.PropertiesComponent
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ToolWindowFactory
@@ -10,7 +11,7 @@ class GPTToolWindowFactory : ToolWindowFactory {
     private val contentFactory = ContentFactory.SERVICE.getInstance()
 
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
-        val savedApiKey = getSavedApiKey()
+        val savedApiKey = loadApiKey()
 
         if (savedApiKey != null) {
             GPTApi.validateApiKey(
@@ -29,7 +30,7 @@ class GPTToolWindowFactory : ToolWindowFactory {
     private fun showAuthenticationPanel(toolWindow: ToolWindow) {
         val authenticationPanel = AuthenticationPanel { apiKey ->
             GPTApi.setApiKey(apiKey)
-            // Save apiKey
+            saveApiKey(apiKey)
             showGptToolWindow(toolWindow)
         }
 
@@ -45,9 +46,12 @@ class GPTToolWindowFactory : ToolWindowFactory {
         toolWindow.contentManager.removeAllContents(true)
         toolWindow.contentManager.addContent(content)
     }
-
-    private fun getSavedApiKey(): String? {
-        // Get saved Api Key and return null if there is no any
-        return null
+    private fun saveApiKey(apiKey: String) {
+        val properties = PropertiesComponent.getInstance()
+        properties.setValue("intelligpt.apiKey", apiKey)
+    }
+    private fun loadApiKey(): String? {
+        val properties = PropertiesComponent.getInstance()
+        return properties.getValue("intelligpt.apiKey")
     }
 }
