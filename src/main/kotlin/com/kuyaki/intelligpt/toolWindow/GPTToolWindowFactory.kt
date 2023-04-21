@@ -1,6 +1,8 @@
 package com.kuyaki.intelligpt.toolWindow
 
-import com.intellij.ide.util.PropertiesComponent
+import com.intellij.credentialStore.CredentialAttributes
+import com.intellij.credentialStore.Credentials
+import com.intellij.ide.passwordSafe.PasswordSafe
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ToolWindowFactory
@@ -47,11 +49,20 @@ class GPTToolWindowFactory : ToolWindowFactory {
         toolWindow.contentManager.addContent(content)
     }
     private fun saveApiKey(apiKey: String) {
-        val properties = PropertiesComponent.getInstance()
-        properties.setValue("intelligpt.apiKey", apiKey)
+        val passwordSafe = PasswordSafe.instance
+        val credentialAttributes = createKey()
+        val credentials = Credentials("", apiKey)
+        passwordSafe.set(credentialAttributes, credentials)
     }
+
     private fun loadApiKey(): String? {
-        val properties = PropertiesComponent.getInstance()
-        return properties.getValue("intelligpt.apiKey")
+        val passwordSafe = PasswordSafe.instance
+        val credentialAttributes = createKey()
+        val credentials = passwordSafe.get(credentialAttributes)
+        return credentials?.getPasswordAsString()
+    }
+
+    private fun createKey(): CredentialAttributes {
+        return CredentialAttributes("IntelliGPT-API-Key")
     }
 }
