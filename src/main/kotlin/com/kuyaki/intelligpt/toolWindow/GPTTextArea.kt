@@ -14,7 +14,7 @@ import javax.swing.KeyStroke
 import javax.swing.event.DocumentEvent
 import javax.swing.event.DocumentListener
 
-class TrimmedTextArea(onEnterPressed: (String) -> Unit) : JTextArea() {
+class GPTTextArea(onEnterPressed: (String) -> Unit) : JTextArea() {
     private var placeholder = GPTBundle.message("inputTextArea.placeholder")
     private var showPlaceholder: Boolean = true
 

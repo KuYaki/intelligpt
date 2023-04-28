@@ -8,7 +8,7 @@ import javax.swing.JPanel
 import javax.swing.UIManager
 
 class GPTInputField(private val onSend: (String) -> Unit) : JPanel(BorderLayout()) {
-    private val inputArea: TrimmedTextArea = TrimmedTextArea { message ->
+    private val inputArea: GPTTextArea = GPTTextArea { message ->
         onSend(message)
     }
     private val sendButton: SendButton = SendButton {
