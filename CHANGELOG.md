@@ -10,6 +10,8 @@
 - Token-based authentication for GPT API access.
 - Improved user interface for authentication.
 - Implemented saving the API key for future use.
+- Basic GPT communicator functionality to send messages and store conversation history.
+- Updated GPTApi to handle new GPT chat-based API requests and responses.
 
 ### To-Do
 - Add animation for button transitions (SendButton and VoiceToggleButton).
@@ -25,3 +27,7 @@
 - Implement voice command processing.
 - Add the plugin's settings to the general settings in the IDE.
 - Implement a dropdown menu on the plugin panel for users to choose the GPT version they want to use.
+- Improve message appearance:
+  - Custom backgrounds for each message.
+  - Handling of HTML tags.
+  - Syntax highlighting.

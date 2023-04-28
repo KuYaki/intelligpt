@@ -25,6 +25,10 @@ The current version of IntelliGPT includes a basic user interface with essential
 8. **Plugin settings**: Add the plugin's settings to the general settings in the IDE, allowing users to customize its behavior according to their preferences.
 9. **GPT version selection**: Implement a dropdown menu on the plugin panel for users to choose the GPT version they want to use.
 10. **Testing**: Thoroughly test the entire plugin, ensuring that all functionalities work as expected and are well-documented.
+11. **Message appearance**: Improve the appearance of GPT chat messages, including:
+   - [ ] Personal backgrounds for each message.
+   - [ ] Handling of HTML tags.
+   - [ ] Syntax highlighting.
 
 ## Roadmap
 The following roadmap outlines the future development of IntelliGPT:
